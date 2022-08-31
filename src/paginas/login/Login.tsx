@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Grid, Typography, TextField, Link, Button } from '@material-ui/core';
+import { Grid, Typography, TextField, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { Box } from '@mui/material';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
@@ -31,26 +32,28 @@ function Login() {
                             </Typography>
 
                             <Box className="textfield-container">
-                                
-                                <TextField className="textfield" label="Username"/>
+
+                                <TextField className="textfield" label="Username" />
                             </Box>
 
                             <Box className="textfield-container">
-                                
+
                                 <TextField className="textfield" label="Password" />
                             </Box>
 
                             <Box className="links">
-                                <Link>
+                                <Link to="">
                                     Não é registrado?
                                 </Link>
 
-                                <Link>
+                                <Link to="">
                                     Esqueci minha senha
                                 </Link>
                             </Box>
 
-                            <Button className="button" variant="contained">LOGIN</Button>
+                            <Link to="/home">
+                                <Button className="button" variant="contained">LOGIN</Button>
+                            </Link>
                         </Box>
                     </Box>
 
