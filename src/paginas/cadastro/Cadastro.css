@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.grid-cadastro {
+    background-image: url(https://cdn.discordapp.com/attachments/710276943592816720/1016330888109375488/background-cadastro.png);
+    background-size: cover;
+
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container02 {
+    width: 100%;
+    height: 100%;
+
+}
+
+.cadastro {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-img {
+    width: 20%;
+    height: 23%;
+}
+
+.title {
+    color: rgb(36, 36, 36);
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: bold!important;
+    margin-bottom: 2rem!important;
+}
+
+.textfield-container {
+    width: 100%;
+    height: 13%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.textfield {
+    width: 55%;
+
+}
+
+.icons {
+    margin-bottom: 0.7rem;
+    color: rgb(150, 150, 150)!important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+    color: rgb(116, 116, 116)!important;
+}
+
+.MuiInputBase-input {
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: bold!important;
+    color: rgb(75, 75, 75)!important;
+    padding-bottom: 1rem!important;
+}
+
+.MuiInput-underline:before {
+    color: rgb(150, 150, 150);
+    border-bottom: 2px solid rgb(150, 150, 150)!important;
+}
+
+.MuiInput-underline:after {
+    border-bottom: 2px solid rgb(116, 116, 116)!important;
+}
+
+.links {
+    width: 55%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    color: rgba(150, 150, 150, 0.795);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    transition: ease-in-out 0.5s;
+
+}
+
+.link:hover {
+    color: rgb(150, 150, 150);
+    transition: ease-in-out 0.5s;
+}
+
+.button-container {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.button {
+    width: 55%;
+    height: 3rem;
+
+    border-radius: 30px!important;
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: bold!important;
+    color: whitesmoke!important;
+    background: linear-gradient(90deg, rgba(185,24,24,1) 35%, rgba(217,27,27,1) 100%);
+}
+
+.container01 {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img {
+    width: 70%;
+    height: 70%;
+}
