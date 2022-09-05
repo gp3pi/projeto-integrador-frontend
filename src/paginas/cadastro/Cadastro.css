@@ -121,6 +121,13 @@
     font-weight: bold!important;
     color: whitesmoke!important;
     background: linear-gradient(90deg, rgba(185,24,24,1) 35%, rgba(217,27,27,1) 100%);
+    transition: ease-in-out 0.5s;
+}
+
+.button:hover {
+    color: rgba(217,27,27,1)!important;
+    background: linear-gradient(90deg, rgb(214, 214, 214) 35%, rgb(245, 245, 245) 100%);
+    transition: ease-in-out 0.5s;
 }
 
 .container01 {
@@ -133,7 +140,7 @@
 
 }
 
-.img {
-    width: 70%;
-    height: 70%;
+.img-cadastro {
+    width: 55%;
+    height: 60%;
 }

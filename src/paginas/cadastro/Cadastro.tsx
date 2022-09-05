@@ -84,7 +84,7 @@ function Cadastro() {
                     </Box>
 
                     <Box className="container01">
-                        <img className="img" src="https://cdn.discordapp.com/attachments/710276943592816720/1014935679312072704/password-encryption-2600564-2179749_1.png" alt="signin-image" />
+                        <img className="img-cadastro" src="https://cdn.discordapp.com/attachments/710276943592816720/1016381844595417201/img-cadastro.png" alt="signup" />
                     </Box>
 
                 </Box>
