@@ -7,6 +7,7 @@ import Footer from './componentes/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import SobreNos from './paginas/sobrenos/SobreNos';
 import Home from './paginas/home/Home';
+import Cadastro from './paginas/cadastro/Cadastro'
 
 import './App.css';
 
@@ -25,6 +26,8 @@ function App() {
         <Route path='/' element={<Login />}></Route>
 
         <Route path='/login' element={<Login />}></Route>
+
+        <Route path='/cadastro' element={<Cadastro />}></Route>
 
       </Routes>
 
