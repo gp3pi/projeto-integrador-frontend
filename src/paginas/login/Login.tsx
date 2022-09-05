@@ -1,79 +1,153 @@
-import React from 'react';
+import React, { useState, useEffect, ChangeEvent } from "react";
+import useLocalStorage from "react-use-localstorage";
+import { useNavigate } from "react-router-dom";
+import { Grid, Typography, TextField, Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
+import InputAdornment from "@mui/material/InputAdornment";
+import PersonIcon from "@material-ui/icons/Person";
+import LockIcon from "@material-ui/icons/Lock";
 
-import { Grid, Typography, TextField, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import { Box } from '@mui/material';
-import InputAdornment from '@mui/material/InputAdornment';
-import PersonIcon from '@material-ui/icons/Person';
-import LockIcon from '@material-ui/icons/Lock';
-
-import './Login.css'
+import { login } from "../../services/Service";
+import UserLogin from "../../models/UserLogin";
+import "./Login.css";
+import "./Login.css";
 
 function Login() {
-    return (
-        <>
+  let navigate = useNavigate();
+  const [token, setToken] = useLocalStorage("token");
+  const [userLogin, setUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    senha: "",
+    foto: "",
+    token: "",
+  });
 
-            <Grid className="grid" container sm={12}>
+  function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+    setUserLogin({
+      ...userLogin,
+      [e.target.name]: e.target.value,
+    });
+  }
 
-                <Box className="main-container">
+  useEffect(() => {
+    if (token != "") {
+      navigate("/home");
+    }
+  }, [token]);
 
-                    <Box className="container01">
-                        <img className="img" src="https://cdn.discordapp.com/attachments/710276943592816720/1014935679312072704/password-encryption-2600564-2179749_1.png" alt="signin-image" />
-                    </Box>
+  async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+    e.preventDefault();
+    try {
+      await login(`/usuarios/logar`, userLogin, setToken);
 
-                    <Box className="container02">
+      alert("Usuário logado com sucesso!");
+    } catch (error) {
+      alert("Dados do usuário inconsistentes. Erro ao logar!");
+    }
+  }
 
-                        <Box className="login">
-                            <img className="profile-img" src="https://cdn.discordapp.com/attachments/710276943592816720/1014738564476571688/78-786293_1240-x-1240-0-avatar-profile-icon-png.png" alt="" />
+  return (
+    <>
+    <form onSubmit={onSubmit}>
+      <Grid className="grid" container sm={12}>
+        <Box className="main-container">
+          <Box className="container01">
 
-                            <Typography className="title" variant="h3">
-                                Bem-vindo!
-                            </Typography>
-
-                            <Box className="textfield-container">
-                                <TextField className="textfield" type="email" InputProps={{
-                                    startAdornment: (
-                                        <InputAdornment position="start">
-                                            <PersonIcon className="icons" />
-                                        </InputAdornment>
-                                    ),
-                                }}
-                                    variant="standard" />
-                            </Box>
-
-                            <Box className="textfield-container">
-                                <TextField className="textfield" type="password" InputProps={{
-                                    startAdornment: (
-                                        <InputAdornment position="start">
-                                            <LockIcon className="icons" />
-                                        </InputAdornment>
-                                    ),
-                                }}
-                                    variant="standard" />
-                            </Box>
-
-                            <Box className="links">
-                                <Link className="link" to="">
-                                    Não é registrado?
-                                </Link>
-
-                                <Link className="link" to="">
-                                    Esqueci minha senha
-                                </Link>
-                            </Box>
-
-                            <Link className="button-container" to="/home">
-                                <Button className="button" variant="contained">LOGIN</Button>
-                            </Link>
-                        </Box>
-                    </Box>
-
+            <img
+              className="img"
+              src="https://cdn.discordapp.com/attachments/710276943592816720/1014935679312072704/password-encryption-2600564-2179749_1.png"
+              alt="signin-image"
+            />
+          </Box>
+          
+          <Box className="container02">
+            <Box className="login">
+              <img
+                className="profile-img"
+                src="https://cdn.discordapp.com/attachments/710276943592816720/1014738564476571688/78-786293_1240-x-1240-0-avatar-profile-icon-png.png"
+                alt=""
+              />
+              
+                <Typography className="title" variant="h3">
+                  Bem-vindo!
+                </Typography>
+                
+                <Box className="textfield-container">
+               
+                  <TextField
+                    value={userLogin.usuario}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      updatedModel(e)
+                    }
+                    className="textfield"
+                    type="email"
+                    name="usuario"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <PersonIcon className="icons" />
+                        </InputAdornment>
+                      ),
+                    }}
+                    variant="standard"
+                    
+                  />
+                
                 </Box>
 
-            </Grid>
+                <Box className="textfield-container">
+                
+                  <TextField
+                    value={userLogin.senha}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      updatedModel(e)
+                    }
+                    className="textfield"
+                    type="password"
+                    name="senha"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <LockIcon className="icons" />
+                        </InputAdornment>
+                      ),
+                    }}
+                    variant="standard"
+                  />
+                  
+                </Box>
+                
+              
 
-        </>
-    )
+              <Box className="links">
+                <Link className="link" to="/cadastro">
+                  Não é registrado?
+                </Link>
+
+                <Link className="link" to="">
+                  Esqueci minha senha
+                </Link>
+              </Box>
+
+              
+                <Button type="submit" className="button" variant="contained">
+                  LOGIN
+                </Button>
+              
+            </Box>
+
+          </Box>
+                    
+        </Box>
+       
+        
+      </Grid>
+      </form>
+    </>
+  );
 }
 
 export default Login;
