@@ -1,20 +1,19 @@
 import { Grid, Button, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
+import "./Home.css";
 import Wallpaper from "../home/images/homepicturetemporaria.png";
-import './Home.css';
 
 function Home() {
   return (
     <>
-      <Grid 
+      <Grid
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
         className="caixa"
-      
       >
-        <Grid  alignItems="center" item xs={6}>
+        <Grid alignItems="center" item xs={6}>
           <Box paddingX={20}>
             <Typography
               variant="h3"
@@ -24,7 +23,7 @@ function Home() {
               align="center"
               className="titulo"
             >
-              Rede Social Grupo 3
+              Telk
             </Typography>
             <Typography
               variant="h5"
@@ -34,7 +33,7 @@ function Home() {
               align="center"
               className="titulo"
             >
-              Bem vindo à Rede Social Grupo 3.
+              Bem vindo à Rede Social Telk.
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center">
@@ -44,12 +43,7 @@ function Home() {
             </Button>
           </Box>
         </Grid>
-        <Grid 
-        justifyContent="center"
-        alignItems="center" 
-        item xs={6}>
-          <img src={Wallpaper} alt="" />
-        </Grid>
+        <Grid item xs={6}></Grid>
         <Grid xs={12} className="postagens"></Grid>
       </Grid>
     </>

@@ -1,4 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .caixa{
-    height: 100vh !important;
-    background-color: blueviolet;
+
+height: 100vh;
+width: 100vw;    
+background: rgb(237,20,20);
+
+background-size: 100% 100%;
+background-repeat: no-repeat;
+margin: 0px;
+
+}
+
+.titulo{
+    color: black!important;
+    font-weight: bold!important;
+}
+
+.botao{
+    
+    width: 55%;
+    height: 3rem;
+
+    border-radius: 30px!important;
+    font-family: 'Open Sans', sans-serif!important;
+    font-weight: bold!important;
+    color: whitesmoke!important;
+    background: linear-gradient(90deg, rgba(185,24,24,1) 35%, rgba(217,27,27,1) 100%);
+
+}
+
+.postagens{
+     background-color: white;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
 }

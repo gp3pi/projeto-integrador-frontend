@@ -13,7 +13,7 @@ function Footer() {
                 className = 'folha' 
                 alignItems="center" 
                 item xs={12}>
-                    <Box
+                    <Box className='colorCont02'
                     style={{ height: "90px" }}>
                         <Box 
                         paddingTop={2} display="flex" 
