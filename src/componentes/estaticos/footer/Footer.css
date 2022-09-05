@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27');
+
+.colorCont {
+    background: linear-gradient(36deg, #e30202 0%, #fbebeb 80%);
+}
+
+.colorCont02 {
+    background: linear-gradient(36deg,#fbebeb 0%, #e30202 80%);
+}
