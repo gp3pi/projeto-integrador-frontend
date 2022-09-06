@@ -1,7 +1,6 @@
 import { Grid, Button, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import "./Home.css";
-import Wallpaper from "../home/images/homepicturetemporaria.png";
 
 function Home() {
   return (
