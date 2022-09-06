@@ -1,0 +1,28 @@
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+
+    background-color: #960718 !important;
+}
+
+.MuiTypography-h5 {
+    font-size: 1.5 rem !important;
+    font-family:'Open Sans', sans-serif!important;
+  
+}
+
+.MuiButton-textPrimary {
+    font-family: 'Open Sans', sans-serif!important;
+    color: whitesmoke !important;
+}
+
+.css-1q39md6-MuiButtonBase-root-MuiButton-root:hover {
+
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: rgb(247, 243, 17) !important;
+}
+
+.css-2s90m6-MuiAvatar-root {
+    
+    color: #960718 !important;
+    background-color: #f3e6e6 !important;
+}
