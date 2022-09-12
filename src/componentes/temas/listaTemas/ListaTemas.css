@@ -1,0 +1,13 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.tema {
+    min-height: 62vh !important;
+}
+
+.card02 {
+    background-color: #212121 !important;
+    color: white !important;
+    font-weight: bold !important;
+}

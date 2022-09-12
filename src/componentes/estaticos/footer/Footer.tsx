@@ -14,7 +14,7 @@ function Footer() {
                 alignItems="center" 
                 item xs={12}>
                     <Box className='colorCont02'
-                    style={{ height: "90px" }}>
+                    style={{ height: "90px", background: " #960718 " }}>
                         <Box 
                         paddingTop={2} display="flex" 
                         alignItems="center" 
@@ -23,7 +23,7 @@ function Footer() {
                             variant="h6" 
                             align="center" 
                             gutterBottom 
-                            style={{ color: "black" }}>Responsaveis pela criação
+                            style={{ color: "white" }}>Responsaveis pela criação
                             </Typography>
                         </Box>
                         <Box 
@@ -49,7 +49,7 @@ function Footer() {
                             variant="subtitle2" 
                             align="center" 
                             gutterBottom 
-                            style={{ color: "black" }} >© 2022 Copyright:
+                            style={{ color: "white" }} >© 2022 Copyright:
                             </Typography>
                         </Box>
                         <Box>
@@ -59,7 +59,7 @@ function Footer() {
                                 <Typography 
                                 variant="subtitle2" 
                                 gutterBottom 
-                                style={{ color: "black" }}
+                                style={{ color: "white" }}
                                 className='link' 
                                 align="center">com.blogpessoal.org
                                 
