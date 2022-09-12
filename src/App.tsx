@@ -10,9 +10,7 @@ import Home from './paginas/home/Home';
 import Cadastro from './paginas/cadastro/Cadastro'
 
 import './App.css';
-import ListaTemas from './componentes/temas/listaTemas/ListaTemas';
-import CadastroTemas from './componentes/temas/cadastroTemas/CadastroTemas';
-import DeletarTemas from './componentes/temas/deletarTemas/DeletarTemas';
+
 
 function App() {
   return (
@@ -32,15 +30,6 @@ function App() {
 
         <Route path='/cadastro' element={<Cadastro />}></Route>
 
-        <Route path='/temas'> <ListaTemas /></Route>
-
-        <Route path='/temas'><ListaTemas /></Route>
-
-        <Route path='/formularioTemas'><CadastroTemas /></Route>
-
-        <Route path='/formularioTemas/:id'><CadastroTemas /></Route>
-
-        <Route path='/deletarTemas/:id'><DeletarTemas /></Route>
 
       </Routes>
 
