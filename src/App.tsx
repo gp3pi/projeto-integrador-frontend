@@ -7,7 +7,10 @@ import Footer from './componentes/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import SobreNos from './paginas/sobrenos/SobreNos';
 import Home from './paginas/home/Home';
-import Cadastro from './paginas/cadastro/Cadastro'
+import Cadastro from './paginas/cadastro/Cadastro';
+import DeletarPostagem from './componentes/postagens/deletarPostagem/DeletarPostagem';
+
+
 
 import './App.css';
 
@@ -28,6 +31,11 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
 
         <Route path='/cadastro' element={<Cadastro />}></Route>
+
+        <Route path="/deletarPostagem" element={<DeletarPostagem />} />
+
+
+       
 
       </Routes>
 
