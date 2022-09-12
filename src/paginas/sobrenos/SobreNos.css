@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,400&family=Open+Sans&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans:wght@300&display=swap');
+
 .imagemBanner{
-    background-image: url(https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,h_500,q_auto,w_1024/v1/guides/article_cover/ofkdplx0kuz1yslqiavy);
+    width: 100%;
     background-repeat: no-repeat;
     
     background-size: cover;
@@ -23,14 +24,11 @@
 .fontMerri{
     font-family: 'Merriweather', serif !important;
     font-weight: bold !important;
-}
-.fontSans{
-    font-family: 'Open Sans', sans-serif!important;
+    
 }
 .integrantColor{
-    background-color:#fbebeb;
+    background-color: #F6EEEE;
 }
 .padding{
     padding-top: 20px;
 }
-
