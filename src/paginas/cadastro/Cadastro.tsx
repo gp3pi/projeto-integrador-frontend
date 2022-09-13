@@ -172,7 +172,7 @@ function Cadastro() {
              
 
               <Box className="links">
-                <Link className="link" to="">
+                <Link className="link" to="/login">
                   Já é cadastrado?
                 </Link>
               </Box>
@@ -186,7 +186,7 @@ function Cadastro() {
           </Box>
              
           <Box className="container01">
-            <img className="img-cadastro" src="https://cdn.discordapp.com/attachments/710276943592816720/1016381844595417201/img-cadastro.png" alt="signup" />
+            <img className="img-cadastro" src="https://cdn.discordapp.com/attachments/710276943592816720/1018934632038813826/cadastro.png" alt="signup" />
           </Box>
         </Box>
         

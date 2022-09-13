@@ -1,6 +1,6 @@
 interface Tema{
     id: number;
-    titulo: string,
+    titulo: string;
     descricao: string;
 }
 

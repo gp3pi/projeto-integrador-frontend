@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
 import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
+import { Box } from "@mui/material";
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
@@ -22,7 +22,7 @@ function ListaPostagem() {
   }, [token])
 
   async function getPost() {
-    await busca("/postagens", setPosts, {
+    await busca("/postagem", setPosts, {
       headers: {
         'Authorization': token
       }
@@ -40,18 +40,18 @@ function ListaPostagem() {
       {
         posts.map(post => (
           <Box m={2} >
-            <Card variant="outlined">
+            <Card className="listPost" variant="outlined">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
+                <Typography className='titleList' color="textSecondary" gutterBottom>
                   Postagens
                 </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography className='titleList' variant="h5" component="h2">
                   {post.titulo}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography className='titleList' variant="body2" component="p">
                   {post.texto}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography className='titleList' variant="body2" component="p">
                   {post.tema?.descricao}
                 </Typography>
               </CardContent>
