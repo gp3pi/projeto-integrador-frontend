@@ -49,6 +49,7 @@ function App() {
         <Route path="/formularioTema/:id" element={<CadastrarTema />} />
         
         <Route path="/deletarTema/:id" element={<DeletarTemas />} />
+
       </Routes>
 
       <Footer />
