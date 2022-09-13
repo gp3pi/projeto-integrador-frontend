@@ -12,38 +12,43 @@ function Home() {
         alignItems="center"
         className="caixa"
       >
-        <Grid alignItems="center" item xs={6}>
-          <Box paddingX={20}>
+        <Grid alignItems="center" item xs={4}>
+          <Box className="home-container01">
             <Typography
-              variant="h3"
-              gutterBottom
+              variant="h1"
               color="textPrimary"
               component="h3"
               align="center"
               className="titulo"
             >
-              Telk
+              TELK
             </Typography>
             <Typography
-              variant="h5"
+              variant="h6"
               gutterBottom
               color="textPrimary"
               component="h5"
               align="center"
-              className="titulo"
+              className="subtitulo"
             >
-              Bem vindo à Rede Social Telk.
+              Não importa onde,<br></br>
+              Não importa quando.<br></br>
+              Aqui, a sua conexão faz a diferença.
             </Typography>
-          </Box>
-          <Box display="flex" justifyContent="center">
-            <Box marginRight={1}></Box>
-            <Button variant="outlined" className="botao">
-              Ver o feed de notícias.
+            <Box className="botao-container" display="flex" justifyContent="center">
+            <Button variant="outlined" className="botao-temas">
+              Temas
+            </Button>
+            <Button variant="outlined" className="botao-postagens">
+              Postagens
             </Button>
           </Box>
+          </Box>
+          
         </Grid>
-        <Grid item xs={6}></Grid>
-        <Grid xs={12} className="postagens"></Grid>
+        <Grid className="home-container02" item xs={8}>
+        <img className="img-home" src="https://cdn.discordapp.com/attachments/710276943592816720/1018949366075097120/pi-home.png" alt="dialogo"/>
+        </Grid>
       </Grid>
     </>
   );
