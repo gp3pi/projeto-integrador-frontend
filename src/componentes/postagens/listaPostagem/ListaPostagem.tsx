@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import { Box } from "@mui/material";
 import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
+import { Box } from "@mui/material";
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
@@ -39,7 +39,6 @@ function ListaPostagem() {
     <>
       {
         posts.map(post => (
-
           <Box m={2} >
             <Card className="listPost" variant="outlined">
               <CardContent>

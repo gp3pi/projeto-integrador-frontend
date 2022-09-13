@@ -7,7 +7,10 @@ import Footer from './componentes/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import SobreNos from './paginas/sobrenos/SobreNos';
 import Home from './paginas/home/Home';
-import Cadastro from './paginas/cadastro/Cadastro'
+import Cadastro from './paginas/cadastro/Cadastro';
+import DeletarPostagem from './componentes/postagens/deletarPostagem/DeletarPostagem';
+
+
 
 import './App.css';
 import ListaPostagem from './componentes/postagens/listaPostagem/ListaPostagem';
@@ -49,6 +52,9 @@ function App() {
         <Route path="/formularioTema/:id" element={<CadastrarTema />} />
         
         <Route path="/deletarTema/:id" element={<DeletarTemas />} />
+        
+        <Route path="/deletarPostagem" element={<DeletarPostagem />} />
+
 
       </Routes>
 
