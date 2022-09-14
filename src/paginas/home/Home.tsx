@@ -3,6 +3,8 @@ import { Box } from "@mui/material";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
+import ModalTema from "../../componentes/temas/modalTema/ModalTema";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import "./Home.css";
 
@@ -56,16 +58,13 @@ function Home() {
               display="flex"
               justifyContent="center"
             >
-              <Link to="/temas">
-                <Button variant="outlined" className="botao-temas">
-                  Temas
-                </Button>
-              </Link>
-              <Link to="/posts">
-                <Button variant="outlined" className="botao-postagens">
-                  Postagens
-                </Button>
-              </Link>
+                <Box>
+                  <ModalPostagem/>
+                </Box>
+              
+                <Box>
+                  <ModalTema/>
+                </Box>
             </Box>
           </Box>
         </Grid>
