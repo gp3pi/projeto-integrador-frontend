@@ -5,10 +5,11 @@
 }
 
 .listPost {
-    width: 70%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 15px!important;
     
 }
 
@@ -34,4 +35,34 @@
 .img-post {
     height: 100%;
     width: 100%;
+}
+
+.post-icones {
+    color: gray!important;
+}
+
+.post-btn {
+    background-color: whitesmoke!important;
+    width: 20rem;
+    box-shadow: none!important;
+}
+
+.post-btn:hover {
+    background-color: rgb(233, 233, 233)!important;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly!important;
+}
+
+.MuiCardActions-root {
+    width: 100%;
+}
+
+.divisoria {
+    width: 95%;
+    height: 10px;
+    border-top: 2px solid rgb(216, 216, 216);
 }

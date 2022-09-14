@@ -49,7 +49,7 @@ function DeletarPostagem() {
     navigate("/posts");
 
     try {
-      await deleteId(`/postagens/${id}`, {
+      await deleteId(`/postagem/${id}`, {
         headers: {
           Authorization: token,
         },

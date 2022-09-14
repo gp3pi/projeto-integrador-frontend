@@ -53,7 +53,7 @@ function App() {
 
           <Route path="/deletarTema/:id" element={<DeletarTemas />} />
 
-          <Route path="/deletarPostagem" element={<DeletarPostagem />} />
+          <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
         </Routes>
 
         <Footer />

@@ -12,6 +12,9 @@ import {
 import "./ListaPostagem.css";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
+import CreateIcon from '@material-ui/icons/Create';
+import CloseIcon from '@material-ui/icons/Close';
+
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 
@@ -20,6 +23,7 @@ function ListaPostagem() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -53,9 +57,19 @@ function ListaPostagem() {
                 </Typography>
               </Box>
 
-              <Box className="img-card">
-                <img className="img-post" src={post.imagem} />
-              </Box>
+                <Box className="user-box">
+                  <img src="" alt="" />
+                </Box>
+
+                <Box>
+                  <Typography className='titleList' variant="h5" component="p">
+                    {post.tema?.titulo}
+                  </Typography>
+                </Box>
+
+                <Box className="img-card">
+                  <img className="img-post" src={post.imagem} />
+                </Box>
 
               <Box>
                 <Typography className="titleList" variant="h5" component="h2">
@@ -69,44 +83,33 @@ function ListaPostagem() {
                 </Typography>
               </Box>
 
-              <Box>
-                <Typography className="titleList" variant="body2" component="p">
-                  {post.tema?.titulo}
-                </Typography>
-              </Box>
-            </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
-                <Link
-                  to={`/formularioPostagem/${post.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button
-                      variant="contained"
-                      className="marginLeft"
-                      size="small"
-                      color="primary"
-                    >
-                      atualizar
-                    </Button>
-                  </Box>
-                </Link>
-                <Link
-                  to={`/deletarPostagem/${post.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
-                      deletar
-                    </Button>
-                  </Box>
-                </Link>
-              </Box>
-            </CardActions>
-          </Card>
-        </Box>
-      ))}
+              </CardContent>
+
+              <Box className="divisoria"></Box>
+
+              <CardActions className="card-actions">
+                <Box className="btn-container" display="flex" justifyContent="center" mb={1.5}>
+
+                  <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
+                    <Box mx={1}>
+                      <Button variant="contained" className="post-btn" size='small'>
+                        <CreateIcon className="post-icones" />
+                      </Button>
+                    </Box>
+                  </Link>
+                  <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button className="post-btn" variant="contained" size='small'>
+                        <CloseIcon className="post-icones" />
+                      </Button>
+                    </Box>
+                  </Link>
+                </Box>
+              </CardActions>
+            </Card>
+          </Box>
+        ))
+      }
     </>
   );
 }

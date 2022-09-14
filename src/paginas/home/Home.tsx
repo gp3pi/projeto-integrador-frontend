@@ -51,22 +51,24 @@ function Home() {
               Não importa quando.<br></br>
               Aqui, a sua conexão faz a diferença.
             </Typography>
+
             <Box
               className="botao-container"
               display="flex"
               justifyContent="center"
             >
-              <Link to="/temas">
+              
                 <Button variant="outlined" className="botao-temas">
                   Temas
                 </Button>
-              </Link>
-              <Link to="/posts">
+              
+              
                 <Button variant="outlined" className="botao-postagens">
                   Postagens
                 </Button>
-              </Link>
+              
             </Box>
+
           </Box>
         </Grid>
         <Grid className="home-container02" item xs={8}>

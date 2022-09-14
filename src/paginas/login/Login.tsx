@@ -85,6 +85,7 @@ function Login() {
                     className="textfield"
                     type="email"
                     name="usuario"
+                    label="E-mail"
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
@@ -105,6 +106,7 @@ function Login() {
                     className="textfield"
                     type="password"
                     name="senha"
+                    label="Senha"
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
