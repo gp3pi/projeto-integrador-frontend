@@ -2,8 +2,7 @@
 
 .caixa{
 
-height: 100vh;
-width: 100vw;    
+
 background-image: url(https://cdn.discordapp.com/attachments/710276943592816720/1018947013255114943/homebk.png);
 background-size: cover;
 margin: 0;
@@ -65,7 +64,3 @@ padding-left: 1rem;
     
 }
 
-.tab {
-    height: 100vh;
-    width: 100vh;
-}

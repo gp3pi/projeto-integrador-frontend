@@ -90,8 +90,8 @@ function Home() {
             alt="dialogo"
           />
         </Grid>
-        <Grid xs={12} className="tab">
-          <TabPostagem />
+        <Grid xs={12} >
+          <TabPostagem/>
         </Grid>
       </Grid>
     </>
