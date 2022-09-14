@@ -123,7 +123,7 @@ function CadastrarPostagem() {
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
         console.log(`Error: ${error}`);
-        toast.info('Verifique a quantidade de caracter.', {
+        toast.info('Verifique a quantidade de caracteres e o preenchimento dos campos!', {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -159,7 +159,7 @@ function CadastrarPostagem() {
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
         console.log(`Error: ${error}`);
-        toast.error('Erro, por favor verifique a quantidade minima de caracteres!', {
+        toast.error('Verifique a quantidade de caracteres e o preenchimento dos campos!', {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
