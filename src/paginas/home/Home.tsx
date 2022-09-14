@@ -1,8 +1,24 @@
 import { Grid, Button, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { TokenState } from "../../store/tokens/tokensReducer";
 import "./Home.css";
 
 function Home() {
+  let navigate = useNavigate();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  useEffect(() => {
+    if (token == "") {
+      alert("Você precisa estar logado.");
+      navigate("/login");
+    }
+  }, [token]);
+
   return (
     <>
       <Grid
@@ -35,19 +51,26 @@ function Home() {
               Não importa quando.<br></br>
               Aqui, a sua conexão faz a diferença.
             </Typography>
-            <Box className="botao-container" display="flex" justifyContent="center">
-            <Button variant="outlined" className="botao-temas">
-              Temas
-            </Button>
-            <Button variant="outlined" className="botao-postagens">
-              Postagens
-            </Button>
+            <Box
+              className="botao-container"
+              display="flex"
+              justifyContent="center"
+            >
+              <Button variant="outlined" className="botao-temas">
+                Temas
+              </Button>
+              <Button variant="outlined" className="botao-postagens">
+                Postagens
+              </Button>
+            </Box>
           </Box>
-          </Box>
-          
         </Grid>
         <Grid className="home-container02" item xs={8}>
-        <img className="img-home" src="https://cdn.discordapp.com/attachments/710276943592816720/1018949366075097120/pi-home.png" alt="dialogo"/>
+          <img
+            className="img-home"
+            src="https://cdn.discordapp.com/attachments/710276943592816720/1018949366075097120/pi-home.png"
+            alt="dialogo"
+          />
         </Grid>
       </Grid>
     </>
