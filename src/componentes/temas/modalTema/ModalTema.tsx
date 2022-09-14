@@ -5,6 +5,7 @@ import {Button} from "@material-ui/core"
 import { Box } from "@mui/material";
 import CloseIcon from '@material-ui/icons/Close';
 import CadastroTema from '../cadastrarTemas/CadastrarTema';
+import './ModalTema.css';
 
 
 function getModalStyle() {
@@ -60,7 +61,7 @@ function ModalTema () {
     <div>
       <Button
         variant="outlined"
-        className="btnModal"
+        className="btnModal-tema"
         onClick={handleOpen}>Novo Tema</Button>
       <Modal
         open={open}
