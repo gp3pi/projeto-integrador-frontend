@@ -39,21 +39,38 @@ function ListaPostagem() {
     <>
       {
         posts.map(post => (
-          <Box m={2} >
+          <Box className="card-container" m={2} >
             <Card className="listPost" variant="outlined">
-              <CardContent>
-                <Typography className='titleList' color="textSecondary" gutterBottom>
-                  Postagens
-                </Typography>
-                <Typography className='titleList' variant="h5" component="h2">
-                  {post.titulo}
-                </Typography>
-                <Typography className='titleList' variant="body2" component="p">
-                  {post.texto}
-                </Typography>
-                <Typography className='titleList' variant="body2" component="p">
-                  {post.tema?.descricao}
-                </Typography>
+              <CardContent className="card-content">
+
+                <Box className="user-box">
+                  <Typography color="textSecondary" gutterBottom>
+                    Postagens
+                  </Typography>
+                </Box>
+                
+                <Box className="img-card">
+                  <img className="img-post" src={post.imagem} />
+                </Box>
+
+                <Box>
+                  <Typography className='titleList' variant="h5" component="h2">
+                    {post.titulo}
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Typography className='titleList' variant="body2" component="p">
+                    {post.texto}
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Typography className='titleList' variant="body2" component="p">
+                    {post.tema?.titulo}
+                  </Typography>
+                </Box>
+
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
