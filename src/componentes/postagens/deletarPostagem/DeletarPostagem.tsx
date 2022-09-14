@@ -13,6 +13,7 @@ import { buscaId, deleteId } from "../../../services/Service";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function DeletarPostagem() {
   let navigate = useNavigate();
@@ -26,7 +27,16 @@ function DeletarPostagem() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
       navigate("/login");
     }
   }, [token]);
@@ -54,7 +64,16 @@ function DeletarPostagem() {
           Authorization: token,
         },
       });
-      alert("Postagem deletada com sucesso");
+      toast.success('Postagem deletada com sucesso!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
     } catch (error) {
       alert("Erro ao deletar");
     }
@@ -66,38 +85,36 @@ function DeletarPostagem() {
 
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined">
+       <Box m={2}>
+        <Card variant="outlined" >
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
                 Deseja deletar a Postagem:
               </Typography>
-              <Typography color="textSecondary">Tema</Typography>
+              <Typography color="textSecondary" >
+              {post?.titulo}
+              </Typography>
             </Box>
+
           </CardContent>
           <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
+            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-                <Button
-                  variant="contained"
-                  className="marginLeft"
-                  size="large"
-                  color="primary"
-                >
-                  Sim
-                </Button>
+              <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                Sim
+              </Button>
               </Box>
               <Box>
-                <Button variant="contained" size="large" color="secondary">
-                  Não
-                </Button>
+              <Button  onClick={nao} variant="contained" size='large' color="secondary">
+                Não
+              </Button>
               </Box>
             </Box>
           </CardActions>
         </Card>
       </Box>
-    </>
+      </>
   );
 }
 export default DeletarPostagem;

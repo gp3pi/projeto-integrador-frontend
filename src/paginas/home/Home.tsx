@@ -3,6 +3,10 @@ import { Box } from "@mui/material";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
+import TabPostagem from "../../componentes/postagens/tabPostagem/TabPostagem";
+import ModalTema from "../../componentes/temas/modalTema/ModalTema";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import "./Home.css";
 
@@ -14,7 +18,16 @@ function Home() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado.");
+      toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
       navigate("/login");
     }
   }, [token]);
@@ -57,16 +70,15 @@ function Home() {
               display="flex"
               justifyContent="center"
             >
+
+                <Box>
+                  <ModalPostagem/>
+                </Box>
               
-                <Button variant="outlined" className="botao-temas">
-                  Temas
-                </Button>
-              
-              
-                <Button variant="outlined" className="botao-postagens">
-                  Postagens
-                </Button>
-              
+                <Box>
+                  <ModalTema/>
+                </Box>
+
             </Box>
 
           </Box>
@@ -77,6 +89,9 @@ function Home() {
             src="https://cdn.discordapp.com/attachments/710276943592816720/1018949366075097120/pi-home.png"
             alt="dialogo"
           />
+        </Grid>
+        <Grid xs={12} className="tab">
+          <TabPostagem />
         </Grid>
       </Grid>
     </>
