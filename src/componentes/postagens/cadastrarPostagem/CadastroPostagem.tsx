@@ -9,12 +9,12 @@ import { busca, buscaId, post, put } from "../../../services/Service";
 
 function CadastrarPostagem() {
 
-let navigate = useNavigate();
-const [token, setToken] = useLocalStorage('token');
-const [temas, setTemas] = useState<Tema[]>([]);
-const { id } = useParams<{ id: string }>();
+  let navigate = useNavigate();
+  const [token, setToken] = useLocalStorage('token');
+  const [temas, setTemas] = useState<Tema[]>([]);
+  const { id } = useParams<{ id: string }>();
 
-useEffect(() => {
+  useEffect(() => {
     if (token == "") {
       alert("Você precisa estar logado");
       navigate("/login");
@@ -30,6 +30,7 @@ useEffect(() => {
     id: 0,
     titulo: "",
     texto: "",
+    imagem: "",
     data: "",
     tema: null,
   });
@@ -150,6 +151,18 @@ useEffect(() => {
             label="Texto"
             name="texto"
             variant="outlined"
+            margin="normal"
+            fullWidth
+          />
+
+          <TextField
+            className="titleList"
+            value={postagem.imagem}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            id="imagem"
+            label="Imagem"
+            variant="outlined"
+            name="imagem"
             margin="normal"
             fullWidth
           />
