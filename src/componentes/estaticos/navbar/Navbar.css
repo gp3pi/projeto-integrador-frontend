@@ -1,5 +1,6 @@
 .MuiAppBar-colorPrimary {
     background-color: #960718 !important;
+    box-shadow: none!important;
 }
 
 .colornav {
