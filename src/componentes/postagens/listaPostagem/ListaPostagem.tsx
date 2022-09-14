@@ -7,9 +7,11 @@ import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
 import { Box } from "@mui/material";
+import CreateIcon from '@material-ui/icons/Create';
+import CloseIcon from '@material-ui/icons/Close';
 
 function ListaPostagem() {
-  const [posts, setPosts] = useState<Postagem[]>([])
+  const [posts, setPosts] = useState<Postagem[]>([]);
   const [token, setToken] = useLocalStorage('token');
   let navigate = useNavigate();
 
@@ -44,11 +46,15 @@ function ListaPostagem() {
               <CardContent className="card-content">
 
                 <Box className="user-box">
-                  <Typography color="textSecondary" gutterBottom>
-                    Postagens
+                  <img src="" alt="" />
+                </Box>
+
+                <Box>
+                  <Typography className='titleList' variant="h5" component="p">
+                    {post.tema?.titulo}
                   </Typography>
                 </Box>
-                
+
                 <Box className="img-card">
                   <img className="img-post" src={post.imagem} />
                 </Box>
@@ -65,27 +71,24 @@ function ListaPostagem() {
                   </Typography>
                 </Box>
 
-                <Box>
-                  <Typography className='titleList' variant="body2" component="p">
-                    {post.tema?.titulo}
-                  </Typography>
-                </Box>
-
               </CardContent>
-              <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
+
+              <Box className="divisoria"></Box>
+
+              <CardActions className="card-actions">
+                <Box className="btn-container" display="flex" justifyContent="center" mb={1.5}>
 
                   <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                        atualizar
+                      <Button variant="contained" className="post-btn" size='small'>
+                        <CreateIcon className="post-icones" />
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
-                        deletar
+                      <Button className="post-btn" variant="contained" size='small'>
+                        <CloseIcon className="post-icones" />
                       </Button>
                     </Box>
                   </Link>

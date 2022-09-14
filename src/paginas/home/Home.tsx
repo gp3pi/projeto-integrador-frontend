@@ -37,7 +37,7 @@ function Home() {
             </Typography>
             <Box className="botao-container" display="flex" justifyContent="center">
             <Button variant="outlined" className="botao-temas">
-              Temas
+              Nova postagem
             </Button>
             <Button variant="outlined" className="botao-postagens">
               Postagens

@@ -7,6 +7,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import PersonIcon from "@material-ui/icons/Person";
 import LockIcon from "@material-ui/icons/Lock";
 import EmailIcon from "@material-ui/icons/Email";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
 import './Cadastro.css';
@@ -118,6 +119,28 @@ function Cadastro() {
                     startAdornment: (
                       <InputAdornment position="start">
                         <EmailIcon className="icons" />
+                      </InputAdornment>
+                    ),
+                  }}
+                  variant="standard"
+                  required
+                />
+              </Box>
+
+              <Box className="textfield-container">
+                <TextField
+                  value={user.foto}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    updatedModel(e)
+                  }
+                  className="textfield"
+                  type="text"
+                  label="Link da foto"
+                  name="foto"
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <ExitToAppIcon className="icons" />
                       </InputAdornment>
                     ),
                   }}
