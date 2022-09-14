@@ -12,6 +12,7 @@ import "./Login.css";
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/actions";
+import { toast } from "react-toastify";
 
 function Login() {
   let navigate = useNavigate();
@@ -45,9 +46,27 @@ function Login() {
     try {
       await login(`/usuarios/logar`, userLogin, setToken);
 
-      alert("Usuário logado com sucesso!");
+      toast.success('Usuário logado com sucesso!', {
+        position: "bottom-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
     } catch (error) {
-      alert("Dados do usuário inconsistentes. Erro ao logar!");
+      toast.error('Dados incorretos, digite novamente' , {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
     }
   }
 
@@ -85,6 +104,7 @@ function Login() {
                     className="textfield"
                     type="email"
                     name="usuario"
+                    label="E-mail"
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
@@ -105,6 +125,7 @@ function Login() {
                     className="textfield"
                     type="password"
                     name="senha"
+                    label="Senha"
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
