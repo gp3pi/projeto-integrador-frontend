@@ -2,7 +2,7 @@ import { Grid, Button, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import "./Home.css";
 
@@ -56,12 +56,16 @@ function Home() {
               display="flex"
               justifyContent="center"
             >
-              <Button variant="outlined" className="botao-temas">
-                Temas
-              </Button>
-              <Button variant="outlined" className="botao-postagens">
-                Postagens
-              </Button>
+              <Link to="/temas">
+                <Button variant="outlined" className="botao-temas">
+                  Temas
+                </Button>
+              </Link>
+              <Link to="/posts">
+                <Button variant="outlined" className="botao-postagens">
+                  Postagens
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>

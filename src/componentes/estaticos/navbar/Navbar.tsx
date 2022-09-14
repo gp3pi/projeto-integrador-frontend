@@ -4,21 +4,27 @@ import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { addToken } from "../../../store/tokens/actions";
 
 function Navbar() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
   let navigate = useNavigate();
+  const dispatch = useDispatch();
 
   function goLogout() {
+    dispatch(addToken(""));
     alert("Usuário deslogado");
     navigate("/login");
   }
-  return (
-    <>
+
+  var navbarComponent;
+
+  if (token != "") {
+    navbarComponent = (
       <AppBar position="static">
         <Toolbar variant="dense">
           <Box className="cursor">
@@ -76,8 +82,10 @@ function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
-    </>
-  );
+    );
+  }
+
+  return <>{navbarComponent}</>;
 }
 
 export default Navbar;
