@@ -39,7 +39,6 @@ function Home() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className="caixa"
       >
         <Grid alignItems="center" item xs={4}>
           <Box className="home-container01">
