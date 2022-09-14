@@ -1,5 +1,4 @@
-import React, { useState, useEffect, ChangeEvent } from "react";
-import useLocalStorage from "react-use-localstorage";
+import { useState, useEffect, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -7,15 +6,17 @@ import { Box } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import PersonIcon from "@material-ui/icons/Person";
 import LockIcon from "@material-ui/icons/Lock";
-
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
 import "./Login.css";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
 
 function Login() {
   let navigate = useNavigate();
-  const [token, setToken] = useLocalStorage("token");
+  const dispatch = useDispatch();
+  const [token, setToken] = useState("");
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
     nome: "",
@@ -34,6 +35,7 @@ function Login() {
 
   useEffect(() => {
     if (token != "") {
+      dispatch(addToken(token));
       navigate("/home");
     }
   }, [token]);
@@ -55,7 +57,6 @@ function Login() {
         <Grid className="grid" container sm={12}>
           <Box className="main-container">
             <Box className="container01">
-
               <img
                 className="img"
                 src="https://cdn.discordapp.com/attachments/710276943592816720/1018932683428073592/login.png"
@@ -76,7 +77,6 @@ function Login() {
                 </Typography>
 
                 <Box className="textfield-container">
-
                   <TextField
                     value={userLogin.usuario}
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -94,13 +94,10 @@ function Login() {
                       ),
                     }}
                     variant="standard"
-
                   />
-
                 </Box>
 
                 <Box className="textfield-container">
-
                   <TextField
                     value={userLogin.senha}
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -119,10 +116,7 @@ function Login() {
                     }}
                     variant="standard"
                   />
-
                 </Box>
-
-
 
                 <Box className="links">
                   <Link className="link" to="/cadastro">
@@ -139,14 +133,9 @@ function Login() {
                     LOGIN
                   </Button>
                 </Box>
-
               </Box>
-
             </Box>
-
           </Box>
-
-
         </Grid>
       </form>
     </>
