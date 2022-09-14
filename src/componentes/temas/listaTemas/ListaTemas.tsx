@@ -73,6 +73,7 @@ function ListaTema() {
                       className="marginLeft"
                       size="small"
                       color="primary"
+                      
                     >
                       atualizar
                     </Button>
