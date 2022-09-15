@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 import { Button, Grid, TextField} from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/tokensReducer";
+import { UserState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
 
 function QueroAjudar() {
@@ -21,7 +21,7 @@ function QueroAjudar() {
     })
   );
   let navigate = useNavigate();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
 

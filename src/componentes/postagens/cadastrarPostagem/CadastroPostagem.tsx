@@ -16,14 +16,20 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import Postagem from "../../../models/Postagem";
 import Tema from "../../../models/Tema";
+import User from "../../../models/User";
 import { busca, buscaId, post, put } from "../../../services/Service";
-import { TokenState } from "../../../store/tokens/tokensReducer";
+import { UserState } from "../../../store/tokens/tokensReducer";
 
 function CadastrarPostagem() {
   let navigate = useNavigate();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
+
+  const userId = useSelector<UserState, UserState["id"]>(
+    (state) => state.id
+  );
+
   const [temas, setTemas] = useState<Tema[]>([]);
   const { id } = useParams<{ id: string }>();
 
@@ -55,7 +61,15 @@ function CadastrarPostagem() {
     imagem: "",
     data: "",
     tema: null,
+    usuario: null
   });
+  const [user,setUser] = useState<User>({
+    id: +userId,
+    nome: "",
+    senha: "",
+    foto: "",
+    usuario:"",
+  })
 
   useEffect(() => {
     setPostagem({
@@ -92,6 +106,7 @@ function CadastrarPostagem() {
       ...postagem,
       [e.target.name]: e.target.value,
       tema: tema,
+      usuario: user
     });
   }
 

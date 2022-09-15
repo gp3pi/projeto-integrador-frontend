@@ -25,6 +25,25 @@
     width: 95%;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+}
+
+.user-foto {
+    width: 10%;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.user-nome {
+    font-weight: bold!important;
+}
+
+.user-usuario {
+    color: gray!important;
+}
+
+.user-container {
+    margin-left: 1rem;
 }
 
 .img-card{
@@ -65,4 +84,8 @@
     width: 95%;
     height: 10px;
     border-top: 2px solid rgb(216, 216, 216);
+}
+
+.MuiTabPanel-root {
+    background-color: whitesmoke;
 }
