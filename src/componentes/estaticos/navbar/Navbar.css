@@ -5,7 +5,8 @@
 
 .colornav {
   color: #fbebeb;
-
+  font-family:'Open Sans', sans-serif !important;
+  
 }
 
 .cursorp {
@@ -17,3 +18,4 @@ cursor: pointer;
 
   text-decoration: none;
 }
+
