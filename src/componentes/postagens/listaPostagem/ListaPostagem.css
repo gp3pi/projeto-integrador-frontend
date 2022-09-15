@@ -56,12 +56,34 @@
     width: 100%;
 }
 
+.texto {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.divisoria-titulo {
+    width: 20%;
+    border-bottom: 2px solid rgb(216, 216, 216);
+}
+
+.titleList {
+    font-weight: bold!important;
+}
+
 .post-icones {
     color: gray!important;
 }
 
 .post-btn {
-    background-color: whitesmoke!important;
+    background-color: rgb(228, 227, 227)!important;
     width: 20rem;
     box-shadow: none!important;
 }
