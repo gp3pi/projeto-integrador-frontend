@@ -1,4 +1,5 @@
 import Tema from './Tema'
+import User from './User'
 
 interface Postagem{
     id: number;
@@ -7,6 +8,7 @@ interface Postagem{
     imagem: string;
     data: string;
     tema?: Tema| null
+    usuario?: User| null
 
 }
 
