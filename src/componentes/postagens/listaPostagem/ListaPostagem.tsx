@@ -61,24 +61,28 @@ function ListaPostagem() {
                 </Box>
               </Box>
 
-              <Box>
+              <Box className="container-titulo">
+                <Box className="divisoria-titulo"></Box>
                 <Typography className='titleList' variant="h5" component="p">
                   {post.tema?.titulo}
                 </Typography>
+                <Box className="divisoria-titulo"></Box>
               </Box>
 
               <Box className="img-card">
                 <img className="img-post" src={post.imagem} alt="" />
               </Box>
 
-              <Box>
+              <Box className="container-titulo">
+                <Box className="divisoria-titulo"></Box>
                 <Typography className="titleList" variant="h5" component="h2">
                   {post.titulo}
                 </Typography>
+                <Box className="divisoria-titulo"></Box>
               </Box>
 
-              <Box>
-                <Typography className="titleList" variant="body2" component="p">
+              <Box className="texto">
+                <Typography variant="body2" component="p">
                   {post.texto}
                 </Typography>
               </Box>
