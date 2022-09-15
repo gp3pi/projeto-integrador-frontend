@@ -20,6 +20,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import QueroAjudar from "./paginas/queroAjudar/QueroAjudar";
 
 function App() {
   return (
@@ -57,6 +58,10 @@ function App() {
           <Route path="/deletarTema/:id" element={<DeletarTemas />} />
 
           <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+
+          <Route path="/ajudar" element={<QueroAjudar/>} />
+
+          
         </Routes>
 
         <Footer />
