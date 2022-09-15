@@ -22,7 +22,7 @@
 
 .login {
     width: 100%;
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 85px);
 
     display: flex;
     justify-content: center;
@@ -138,6 +138,6 @@
     float: right;
     width: 145px;
     height: 45px;
-    padding: 15px;
-    padding-right: 20px;
+    padding: 20px;
+    
  }
