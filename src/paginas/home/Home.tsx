@@ -7,12 +7,12 @@ import { toast } from "react-toastify";
 import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
 import TabPostagem from "../../componentes/postagens/tabPostagem/TabPostagem";
 import ModalTema from "../../componentes/temas/modalTema/ModalTema";
-import { TokenState } from "../../store/tokens/tokensReducer";
+import { UserState } from "../../store/tokens/tokensReducer";
 import "./Home.css";
 
 function Home() {
   let navigate = useNavigate();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
 

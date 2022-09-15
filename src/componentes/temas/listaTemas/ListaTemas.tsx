@@ -13,11 +13,11 @@ import { busca } from "../../../services/Service";
 import Tema from "../../../models/Tema";
 import "./ListaTemas.css";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../../store/tokens/tokensReducer";
+import { UserState } from "../../../store/tokens/tokensReducer";
 
 function ListaTema() {
   const [temas, setTemas] = useState<Tema[]>([]);
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
   let navigate = useNavigate();

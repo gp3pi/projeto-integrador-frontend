@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
-import { TokenState } from "../../../store/tokens/tokensReducer";
+import { UserState } from "../../../store/tokens/tokensReducer";
 import { addToken } from "../../../store/tokens/actions";
 import { toast } from "react-toastify";
 
 function Navbar() {
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
   let navigate = useNavigate();
@@ -38,7 +38,7 @@ function Navbar() {
       <AppBar position="static">
         <Toolbar variant="dense">
           <Box className="cursor">
-            <Typography variant="h5" className="colornav">
+            
               <div className="logo">
                 <Link to="/sobrenos">
                   <picture>
@@ -51,7 +51,7 @@ function Navbar() {
                   </picture>
                 </Link>
               </div>
-            </Typography>
+            
           </Box>
 
           <Box display="flex" justifyContent="start">
