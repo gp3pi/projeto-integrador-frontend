@@ -1,11 +1,17 @@
 
   
-  .imagem5 {
-    background-image: url(https://cdn.pixabay.com/photo/2015/06/01/06/32/hand-792920_960_720.jpg);
+  .forms {
+    
     width: 100vh;
     height: 100vh;
-    background-size: cover;
+  
     
   }
   
+  .titleAjud {
+    padding: 40px ;
+    background-image: url(./01.jpg);
+    width: 100vh;
+    height: 80px;
+  }
   
