@@ -68,8 +68,8 @@ function QueroAjudar() {
         alignItems="center"
         
       >
-        <Grid alignItems="center" item xs={12}>
-          <Box style={{background: 'pink'}} paddingX={5}>
+        <Grid alignItems="center" item xs={6}>
+          <Box style={{background: 'pink'}} paddingX={1}>
             
             <a href="https://www.anjosdanoite.org.br/" 
             target='blank'>
@@ -83,10 +83,12 @@ function QueroAjudar() {
             
           </Box>
           
-            <Box style={{background: 'white'}} paddingX={120}>
-            <a href="https://sbsrj.org.br/doe-agora/">
+            <Box style={{background: 'white'}} paddingX={32}>
+            <a href="https://sbsrj.org.br/doe-agora/"
+            target="_blank">
               <img src="https://sbsrj.org.br/wp-content/uploads/2021/08/cropped-SBS-LOGO-196x96.png" alt="" />
             </a>
+            <br />
             <br />
             
             <a
@@ -107,8 +109,9 @@ function QueroAjudar() {
           
 
           
-            <Box style={{background: 'pink'}} paddingX={5}>
-            <a href="https://pontodeamor.ong.br/">
+            <Box style={{background: 'pink'}} paddingX={1}>
+            <a href="https://pontodeamor.ong.br/"
+            target="_blank">
               <img src="https://pontodeamor.ong.br/wp-content/uploads/2021/03/Ponto-de-Amor-Logo-e1655775536281-300x184.png" alt="" />
             </a>
             <p>
@@ -141,8 +144,9 @@ function QueroAjudar() {
             </Box>
           
           
-            <Box paddingX={105}>
-          <a href="https://institutolivres.org.br/como-escolher-uma-ong-que-ajuda-pessoas-para-apoiar/">
+            <Box paddingX={22}>
+          <a href="https://institutolivres.org.br/como-escolher-uma-ong-que-ajuda-pessoas-para-apoiar/"
+          target="_blank">
               <img src="https://institutolivres.org.br/wp-content/uploads/2022/06/logo-instituto-livres-2-1-1.jpg" alt="" />
             </a>
             <br/>
@@ -150,6 +154,60 @@ function QueroAjudar() {
           </Box>
           
           
+        </Grid>
+        <Grid item xs={6}>
+        <Box  paddingX={15}>
+          
+            <Box className="titleAjud">
+            
+            </Box>
+
+            <TextField
+              
+              id="filled-basic"
+              label="Nome"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              required
+            />
+
+            <TextField
+              
+              id="filled-basic"
+              type="email"
+              label="E-mail"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              required
+            />
+
+            <TextField
+              
+              id="outlined-multiline-static"
+              name="assunto"
+              label="Assunto"
+              margin="normal"
+              multiline
+              rows={4}
+              variant="outlined"
+              fullWidth
+              required
+            />
+          </Box>
+          <Box  display="flex" justifyContent="center">
+            <Button
+              className="btn02"
+              type="submit"
+              variant="contained"
+              color="primary"
+              onClick={enviar}
+            >
+              Enviar
+            </Button>
+          </Box>
+
         </Grid>
         
       </Grid>
