@@ -14,6 +14,8 @@ import Tema from "../../../models/Tema";
 import "./ListaTemas.css";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/tokensReducer";
+import CreateIcon from '@material-ui/icons/Create';
+import CloseIcon from '@material-ui/icons/Close';
 
 function ListaTema() {
   const [temas, setTemas] = useState<Tema[]>([]);
@@ -56,14 +58,15 @@ function ListaTema() {
                 >
                   Tema
                 </Typography>
-                <Typography className="titleList" variant="h5" component="h2">
+                <Typography className="temas-title" variant="h5" component="h2">
                   {tema.titulo}
                 </Typography>
                 <Typography className="titleList" variant="h5" component="h2">
                   {tema.descricao}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <Box className="temas-divisoria"></Box>
+              <CardActions className="temas-actions" >
                 <Box display="flex" justifyContent="center" mb={1.5}>
                   <Link
                     to={`/formularioTema/${tema.id}`}
@@ -71,13 +74,12 @@ function ListaTema() {
                   >
                     <Box mx={1}>
                       <Button
+                        className="temas-btn"
                         variant="contained"
-                        className="marginLeft"
                         size="small"
-                        color="primary"
 
                       >
-                        atualizar
+                        <CreateIcon className="temas-icones" />
                       </Button>
                     </Box>
                   </Link>
@@ -86,8 +88,8 @@ function ListaTema() {
                     className="text-decorator-none"
                   >
                     <Box mx={1}>
-                      <Button variant="contained" size="small" color="secondary">
-                        deletar
+                      <Button className="temas-btn" variant="contained" size="small">
+                        <CloseIcon className="temas-icones" />
                       </Button>
                     </Box>
                   </Link>
