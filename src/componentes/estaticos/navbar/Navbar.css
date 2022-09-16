@@ -15,7 +15,17 @@ cursor: pointer;
 }
 
 .text-decorator-none {
-
+  
   text-decoration: none;
+}
+
+.cursor {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.separador {
+  width: 28%;
 }
 
