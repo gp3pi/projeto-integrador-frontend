@@ -1,4 +1,4 @@
-.text-decorator-none{
+.text-decorator-none {
     text-decoration: none;
 }
 
@@ -10,4 +10,80 @@
     background-color: #212121 !important;
     color: white !important;
     font-weight: bold !important;
+}
+
+.container-temas {
+    width: 93vw;
+    margin: 0;
+}
+
+.cardcontainer-temas {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+}
+
+.content-temas {
+    width: 65%;
+    height: 50%;
+}
+
+.temas-title {
+    font-weight: bold !important;
+}
+
+.img-linha01 {
+    width: 0%;
+    height: 60%;
+    border-left: 1px solid rgb(209, 209, 209);
+    -webkit-transform: skew(10deg);
+    margin-right: 0.8rem;
+}
+
+.img-linha02 {
+    width: 0%;
+    height: 80%;
+    border-left: 1px solid rgb(209, 209, 209);
+    -webkit-transform: skew(10deg);
+
+}
+
+.imagem-temas {
+    width: 35%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%);
+}
+
+.img-tema {
+    width: 100%;
+    height: 100%;
+}
+
+.temas-divisoria {
+    width: 84%;
+    height: 10px;
+    border-top: 1px solid rgb(216, 216, 216);
+    margin-left: 4.5rem;
+
+}
+
+.temas-icones {
+    color: gray !important;
+}
+
+.temas-btn {
+    background-color: rgb(228, 227, 227) !important;
+    width: 20rem;
+    box-shadow: none !important;
+}
+
+.temas-btn:hover {
+    background-color: rgb(233, 233, 233) !important;
+}
+
+.temas-actions {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

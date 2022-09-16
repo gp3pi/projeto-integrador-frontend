@@ -48,7 +48,7 @@
 
 .img-card{
     width: 100%;
-    height: 100%;
+    height: 25rem;
 }
 
 .img-post {
@@ -74,7 +74,7 @@
     border-bottom: 2px solid rgb(216, 216, 216);
 }
 
-.titleList {
+.titleList-post {
     font-weight: bold!important;
     text-align: center;
 }

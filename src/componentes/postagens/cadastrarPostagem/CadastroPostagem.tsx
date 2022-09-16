@@ -53,6 +53,7 @@ function CadastrarPostagem() {
     id: 0,
     titulo: "",
     descricao: "",
+    imagemTema: ""
   });
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,

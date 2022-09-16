@@ -63,7 +63,7 @@ function ListaPostagem() {
 
               <Box className="container-titulo">
                 <Box className="divisoria-titulo"></Box>
-                <Typography className='titleList' variant="h5" component="p">
+                <Typography className='titleList-post' variant="h5" component="p">
                   {post.tema?.titulo}
                 </Typography>
                 <Box className="divisoria-titulo"></Box>
@@ -75,7 +75,7 @@ function ListaPostagem() {
 
               <Box className="container-titulo">
                 <Box className="divisoria-titulo"></Box>
-                <Typography className="titleList" variant="h5" component="h2">
+                <Typography className="titleList-post" variant="h5" component="h2">
                   {post.titulo}
                 </Typography>
                 <Box className="divisoria-titulo"></Box>
