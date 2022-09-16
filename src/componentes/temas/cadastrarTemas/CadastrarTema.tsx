@@ -18,6 +18,7 @@ function CadastroTema() {
     id: 0,
     titulo: "",
     descricao: "",
+    imagemTema: ""
   });
 
   useEffect(() => {
@@ -31,7 +32,7 @@ function CadastroTema() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    });
+      });
       navigate("/login");
     }
   }, [token]);
@@ -79,7 +80,7 @@ function CadastroTema() {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          });
+        });
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
@@ -93,7 +94,7 @@ function CadastroTema() {
           draggable: false,
           theme: "colored",
           progress: undefined,
-          });
+        });
       }
 
       // Se o ID for indefinido, tente Cadastrar
@@ -115,7 +116,7 @@ function CadastroTema() {
           draggable: false,
           theme: "colored",
           progress: undefined,
-          });
+        });
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
@@ -129,7 +130,7 @@ function CadastroTema() {
           draggable: false,
           theme: "colored",
           progress: undefined,
-          });
+        });
       }
     }
     back();
@@ -172,6 +173,18 @@ function CadastroTema() {
             margin="normal"
             fullWidth
           />
+
+          <TextField
+            value={tema.imagemTema}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)}
+            id="imagemTema"
+            label="Link da imagem"
+            variant="outlined"
+            name="imagemTema"
+            margin="normal"
+            fullWidth
+          />
+
           <Button type="submit" variant="contained" color="primary" fullWidth>
             Finalizar
           </Button>
