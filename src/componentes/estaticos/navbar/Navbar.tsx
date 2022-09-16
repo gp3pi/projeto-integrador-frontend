@@ -27,7 +27,7 @@ function Navbar() {
       draggable: false,
       theme: "colored",
       progress: undefined,
-  });
+    });
     navigate("/login");
   }
 
@@ -37,31 +37,29 @@ function Navbar() {
     navbarComponent = (
       <AppBar position="static">
         <Toolbar variant="dense">
-          <Box className="cursor">
-              <div className="logo">
-                <Link to="/sobrenos">
-                  <picture>
-                    <img
-                      src="https://i.imgur.com/PWIeTfO.jpg"
-                      alt=""
-                      width="85px"
-                      className="cursorp"
-                    />
-                  </picture>
-                </Link>
-              </div>
-            
+          <Box>
+            <Link className="cursor" to="/sobrenos">
+              <img
+                src="https://i.imgur.com/PWIeTfO.jpg"
+                alt=""
+                width="85px"
+                className="cursorp"
+              />
+            </Link>
           </Box>
 
+          <Box className="separador"></Box>
+
           <Box className="font" display="flex" justifyContent="start">
-            <Link to="/home" className="text-decorator-none">
-              <Box mx={2} className="cursor">
-                <Typography variant="h6" className="colornav">
-                  HOME
-                </Typography>
-              </Box>
-            </Link>
             
+              <Link to="/home" className="text-decorator-none">
+                <Box mx={2} className="cursor">
+                  <Typography variant="h6" className="colornav">
+                    HOME
+                  </Typography>
+                </Box>
+              </Link>
+
             <Link to="/ajudar" className="text-decorator-none">
               <Box mx={2} className="cursor">
                 <Typography variant="h6" className="colornav">
