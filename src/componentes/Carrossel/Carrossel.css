@@ -1,0 +1,21 @@
+.swiper {
+  width: 94vw;
+  height: 68vh;
+  margin: 4px auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.carrossel{
+  width: 100%;
+  height: 100%;
+}

@@ -2,14 +2,13 @@ import React, { useEffect } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import "./QueroAjudar.css";
 import { Box } from "@mui/material";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Button, Grid, TextField} from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { UserState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import { Link, Typography } from '@material-ui/core'
+import Carrossel from '../../componentes/Carrossel/Carrossel'
 
 function QueroAjudar() {
 
@@ -61,106 +60,77 @@ function QueroAjudar() {
 
   return (
     <>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        
-      >
-        <Grid alignItems="center" item xs={6}>
-          <Box style={{background: 'pink'}} paddingX={1}>
-            
-            <a href="https://www.anjosdanoite.org.br/" 
-            target='blank'>
-           <img src="https://www.anjosdanoite.org.br/imagens/logo.png" alt="" />
-            </a>
-            <br />
-            Banco do Brasil : Agência 1812-0 <br /> 
-            Conta : 940709-X - <br />
-            Núcleo Assistêncial Anjos da Noite <br />
-            CNPJ: 67.637.231/0001-81
-            
+    <Grid container >
+      <Grid item xs={12} >
+        <Carrossel />
+      </Grid>
+
+      <Grid container xs={12} sm={12}justifyContent="center" className='colorWhite '>
+            <Box width='25%' padding={10} >
+              <img src="https://cdn.discordapp.com/attachments/1020449442861699127/1020519816227991552/lsbs.png"alt="" width="275px" height="240px"/>
+            </Box>
+            <Box width='35%' padding={10} >
+                <Typography className='fntWork'>A Sociedade Brasileira para Solidariedade nasceu com o sonho de estimular o encontro do indivíduo com suas potencialidades para que reconheça seu papel na sociedade e possa construir seu futuro de maneira digna e...
+                </Typography>
+                <Link href="https://sbsrj.org.br/">
+                  <Typography className="bold">Saiba mais</Typography>
+                </Link>
+            </Box>
+      </Grid>
+
+      <Grid container xs={12} sm={12} direction="row" justifyContent="center" className='colorLight padding15'>
+          <Box width='35%' padding={10} >
+              <Typography className='fntWork'>A TamoJuntas começou uma grande campanha de doação para que mais voluntárias consigam continuar o trabalho de assistência multidisciplinar com mulheres vítimas de violência. Dessa forma, você pode amadrinhar uma...
+              </Typography>
+              <Link href="https://tamojuntas.org.br/">
+                  <Typography className="bold">Saiba mais</Typography>
+              </Link>
           </Box>
-          
-            <Box style={{background: 'white'}} paddingX={32}>
-            <a href="https://sbsrj.org.br/doe-agora/"
-            target="_blank">
-              <img src="https://sbsrj.org.br/wp-content/uploads/2021/08/cropped-SBS-LOGO-196x96.png" alt="" />
-            </a>
-            <br />
-            <br />
-            
-            <a
-            href="https://www.instagram.com/sbsolidariedade/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon style={{ fontSize: 30, color: "black" }} />
-          </a>
-            <a
-            href="https://www.facebook.com/SBsolidariedade/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FacebookIcon style={{ fontSize: 30, color: "black" }} />
-          </a>
-            </Box>
-          
-
-          
-            <Box style={{background: 'pink'}} paddingX={1}>
-            <a href="https://pontodeamor.ong.br/"
-            target="_blank">
-              <img src="https://pontodeamor.ong.br/wp-content/uploads/2021/03/Ponto-de-Amor-Logo-e1655775536281-300x184.png" alt="" />
-            </a>
-            <p>
-            
-            <a
-            href="https://api.whatsapp.com/send/?phone=5548988451057&text=Ol%C3%A1%21+tudo+bem%3F+Vim+atrav%C3%A9s+so+site+da+ONG.&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <WhatsAppIcon style={{ fontSize: 30, color: "black" }} />
-          </a>    
-
-
-            <a
-            href="https://www.instagram.com/ong_pontodeamor/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon style={{ fontSize: 30, color: "black" }} />
-          </a>
-            <a
-            href="https://www.facebook.com/pontodeamorong"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FacebookIcon style={{ fontSize: 30, color: "black" }} />
-          </a>
-  
-            </p>
-            </Box>
-          
-          
-            <Box paddingX={22}>
-          <a href="https://institutolivres.org.br/como-escolher-uma-ong-que-ajuda-pessoas-para-apoiar/"
-          target="_blank">
-              <img src="https://institutolivres.org.br/wp-content/uploads/2022/06/logo-instituto-livres-2-1-1.jpg" alt="" />
-            </a>
-            <br/>
-            <img src="https://institutolivres.org.br/wp-content/uploads/2022/06/pix-livres-1.jpg" alt="" />
+          <Box width='25%' padding={10} >
+            <img src="https://cdn.discordapp.com/attachments/1020449442861699127/1020526688829968414/tamoj.png" width="300px" height="265px" alt="" />
           </Box>
-          
-          
-        </Grid>
-        <Grid item xs={6}>
-        <Box  paddingX={15}>
-          
-            <Box className="titleAjud">
-            
+      </Grid>
+
+      <Grid container xs={12} sm={12} justifyContent="center" className='colorWhite padding15'>
+            <Box width='25%' padding={10} justifyContent="center">
+              <img src="https://cdn.discordapp.com/attachments/1020449442861699127/1020534756615667832/africa_1.png" width="270px" height="285px" alt="" />
             </Box>
+            <Box width='35%' padding={10} >
+                <Typography className='fntWork'>A Missão África foi fundada em 2012 logo após uma viagem que uma de nossas fundadoras fez em Moçambique a convite de uma instituição local. Assim que retornou ao Brasil, juntou com alguns amigos e fundaram a ONG Missão África, com o intuito de transformar a realidade de pessoas que vivem em situação de miséria...
+                </Typography>
+                <Link href="https://www.missaoafrica.org.br/sobre-nos">
+                  <Typography className="bold">Saiba mais</Typography>
+                </Link>
+            </Box>
+      </Grid>
+
+      <Grid container xs={12} sm={12}justifyContent="center" className='colorLight padding15'>
+            <Box width='35%' padding={10} >
+                <Typography className='fntWork'>O escritório do Alto Comissariado das Nações Unidas para os Refugiados (ACNUR) foi criado em 1950, após a Segunda Guerra Mundial, para ajudar milhões de europeus que fugiram ou perderam suas casas...
+                </Typography>
+                <Link href="https://www.unhcr.org/history-of-unhcr.html">
+                  <Typography className="bold">Saiba mais</Typography>
+                </Link>
+            </Box>
+            <Box width='25%' padding={10} >
+              <img src="https://cdn.discordapp.com/attachments/1020449442861699127/1020530829543358556/unh_1.png" width="270px" height="260px" alt="" />
+            </Box>
+      </Grid>
+
+      <Grid container xs={12} sm={12} justifyContent="center" className='colorWhite '>
+        <Box padding={7}>
+          <img src="https://cdn.discordapp.com/attachments/1020449442861699127/1020550075937726505/Elementos.png"  width="140px" height="100px" alt="" />
+        </Box>
+      </Grid>
+    </Grid>
+
+    <Grid item xs={12} sm={12} justifyContent="center" className="center">
+      <Typography className='fntWork bold'>Entre em contato</Typography>
+    </Grid>
+
+    <Grid item xs={12} justifyContent="center">
+        <Box  paddingX={35} className="margin">
+          <Box className="titleAjud"></Box>
 
             <TextField
               
@@ -184,35 +154,30 @@ function QueroAjudar() {
             />
 
             <TextField
-              
-              id="outlined-multiline-static"
-              name="assunto"
-              label="Assunto"
-              margin="normal"
-              multiline
-              rows={4}
-              variant="outlined"
-              fullWidth
-              required
-            />
-          </Box>
-          <Box  display="flex" justifyContent="center">
-            <Button
-              className="btn02"
-              type="submit"
-              variant="contained"
-              color="primary"
-              onClick={enviar}
-            >
-              Enviar
-            </Button>
-          </Box>
+            id="outlined-multiline-static"
+            name="assunto"
+            label="Assunto"
+            margin="normal"
+            multiline
+            rows={4}
+            variant="outlined"
+            fullWidth
+            required/>
+        </Box>
 
-        </Grid>
-        
-      </Grid>
-    </>
-  );
+        <Box  display="flex" justifyContent="center" className="margin">
+          <Button
+            className="btn02"
+            type="submit"
+            variant="contained"
+            color="primary"
+            onClick={enviar}>
+            Enviar
+          </Button>
+        </Box>
+</Grid>
+</>
+);
 }
 
 export default QueroAjudar;
