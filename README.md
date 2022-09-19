@@ -20,8 +20,13 @@ Membros: <br>
 
 ## Instalação
 
-Clonar o repositório :
+Clonar o repositório:
 
 ```bash
 git clone https://github.com/gp3pi/projeto-integrador-frontend.git
+```
+Instalas as dependencias:
+
+```bash
+npm install
 ```
