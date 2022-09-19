@@ -65,7 +65,7 @@ function Footer() {
               </Typography>
             </Box>
             <Box>
-              <a target="_blank" href="">
+              <a className="text-decorator-none" target="_blank" href="">
                 <Typography
                   variant="subtitle2"
                   gutterBottom
@@ -73,7 +73,7 @@ function Footer() {
                   className="link"
                   align="center"
                 >
-                  com.blogpessoal.org
+                  com.telk
                 </Typography>
               </a>
             </Box>
