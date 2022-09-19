@@ -89,3 +89,13 @@ Este projeto é construído em torno de três entidades: usuário, tema e postag
 
 ![image](https://user-images.githubusercontent.com/92900668/191022360-703fd025-d963-4087-84f7-cc51aa3991da.png)
 
+## Implementações futuras
+
+### Como ideias para implementações futuras e consequente evolução na aplicação, entre outras, temos:
+
+#### Funcionalidades de like, dislike e comentário
+
+#### Aumentar o grau de complexidade do feed de postagens
+
+#### Melhorar a cybersegurança
+
