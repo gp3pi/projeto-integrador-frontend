@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.caixa {
+    
+    margin: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+}
+
+.titulo {
+    color: rgba(185, 24, 24, 1) !important;
+    font-weight: bold !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.botao-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly !important;
+}
+
+.botao-postagens {
+
+    width: 35%;
+    height: 3rem;
+
+    border-radius: 5px !important;
+    border: none !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold !important;
+    color: whitesmoke !important;
+    background-color: rgb(241, 25, 25) !important;
+
+}
+
+.botao-temas {
+    width: 35%;
+    height: 3rem;
+
+    border-radius: 5px !important;
+    border: 2px solid rgb(241, 25, 25) !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold !important;
+    color: rgb(241, 25, 25) !important;
+    background-color: white !important;
+}
+
+.postagens {
+    background-color: white;
+}
+
+.img-home {
+    width: 100%;
+    height: 80%;
+}
+
+.home-container01 {
+    height: 100%;
+    width: 100%;
+
+}
+
+.home-container02 {
+    background-image: url(https://cdn.discordapp.com/attachments/710276943592816720/1018947013255114943/homebk.png);
+    background-size: cover;
+}

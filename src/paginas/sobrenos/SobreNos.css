@@ -1,13 +1,37 @@
-.imagems{
-    background-image: url(https://cdn.noticias.ambientebrasil.com.br/wp-content/uploads/2020/12/floresta_tropical-1024x576.jpg);
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans:wght@300&display=swap');
+
+.imagemBanner{
+    width: 100%;
     background-repeat: no-repeat;
     
     background-size: cover;
     background-position: center;
 }
 .perfis{
-    width:170px;
-    height:170px;
+    width:150px;
+    height:150px;
     display: block;
     margin:0 auto;
+}
+
+.marginText{
+    margin-top: 4px;
+    margin-bottom: 50px;
+}
+.fontWork{
+    font-family: 'Work Sans', sans-serif !important;
+}
+.fontMerri{
+    font-family: 'Merriweather', serif !important;
+    font-weight: bold !important;
+    
+}
+.integrantColor{
+    background-color: #F6EEEE;
+}
+.padding{
+    padding-top: 20px;
+}
+.padding15{
+    padding-top: 15px;
 }

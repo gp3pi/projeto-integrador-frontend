@@ -1,0 +1,114 @@
+.card-container {
+    width: 96.4vw;
+    display: flex;
+    justify-content: center;
+}
+
+.listPost {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px!important;
+    
+}
+
+.card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-box {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-foto {
+    width: 10%;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.user-nome {
+    font-weight: bold!important;
+}
+
+.user-usuario {
+    color: gray!important;
+}
+
+.user-container {
+    margin-left: 1rem;
+}
+
+.img-card{
+    width: 100%;
+    height: 25rem;
+}
+
+.img-post {
+    height: 100%;
+    width: 100%;
+}
+
+.texto {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.divisoria-titulo {
+    width: 20%;
+    border-bottom: 2px solid rgb(216, 216, 216);
+}
+
+.titleList-post {
+    font-weight: bold!important;
+    text-align: center;
+}
+
+.post-icones {
+    color: gray!important;
+}
+
+.post-btn {
+    background-color: rgb(228, 227, 227)!important;
+    width: 20rem;
+    box-shadow: none!important;
+}
+
+.post-btn:hover {
+    background-color: rgb(233, 233, 233)!important;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly!important;
+}
+
+.MuiCardActions-root {
+    width: 100%;
+}
+
+.divisoria {
+    width: 95%;
+    height: 10px;
+    border-top: 2px solid rgb(216, 216, 216);
+}
+
+.MuiTabPanel-root {
+    background-color: whitesmoke;
+}

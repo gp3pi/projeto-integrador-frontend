@@ -1,36 +1,72 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from './componentes/estaticos/navbar/Navbar';
-import Footer from './componentes/estaticos/footer/Footer';
-import Login from './paginas/login/Login';
-import SobreNos from './paginas/sobrenos/SobreNos';
-import Home from './paginas/home/Home';
+import Navbar from "./componentes/estaticos/navbar/Navbar";
+import Footer from "./componentes/estaticos/footer/Footer";
+import Login from "./paginas/login/Login";
+import SobreNos from "./paginas/sobrenos/SobreNos";
+import Home from "./paginas/home/Home";
+import Cadastro from "./paginas/cadastro/Cadastro";
+import DeletarPostagem from "./componentes/postagens/deletarPostagem/DeletarPostagem";
 
-import './App.css';
+import "./App.css";
+import ListaPostagem from "./componentes/postagens/listaPostagem/ListaPostagem";
+import CadastroPostagem from "./componentes/postagens/cadastrarPostagem/CadastroPostagem";
+import DeletarTemas from "./componentes/temas/deletarTema/DeletarTemas";
+import CadastrarTema from "./componentes/temas/cadastrarTemas/CadastrarTema";
+import ListaTemas from "./componentes/temas/listaTemas/ListaTemas";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import QueroAjudar from "./paginas/queroAjudar/QueroAjudar";
 
 function App() {
   return (
-    <Router>
+    <Provider store={store}>
+       <ToastContainer />
+      <Router>
+        <Navbar />
 
-      <Navbar />
+        <Routes>
+          <Route path="/home" element={<Home />}></Route>
 
-      <Routes>
+          <Route path="/sobrenos" element={<SobreNos />}></Route>
 
-        <Route path='/home' element={<Home />}></Route>
+          <Route path="/" element={<Login />}></Route>
 
-        <Route path='/sobrenos' element={<SobreNos />}></Route>
+          <Route path="/login" element={<Login />}></Route>
 
-        <Route path='/' element={<Login />}></Route>
+          <Route path="/cadastro" element={<Cadastro />}></Route>
 
-        <Route path='/login' element={<Login />}></Route>
+          <Route path="/posts" element={<ListaPostagem />} />
 
-      </Routes>
+          <Route path="/formularioPostagem" element={<CadastroPostagem />} />
 
-      <Footer />
+          <Route
+            path="/formularioPostagem/:id"
+            element={<CadastroPostagem />}
+          />
 
-    </Router>
+          <Route path="/temas" element={<ListaTemas />} />
+
+          <Route path="/formularioTema" element={<CadastrarTema />} />
+
+          <Route path="/formularioTema/:id" element={<CadastrarTema />} />
+
+          <Route path="/deletarTema/:id" element={<DeletarTemas />} />
+
+          <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+
+          <Route path="/ajudar" element={<QueroAjudar/>} />
+
+          
+        </Routes>
+
+        <Footer />
+      </Router>
+    </Provider>
   );
 }
 
