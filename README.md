@@ -17,3 +17,11 @@ Membros: <br>
 <br>
 <a href="https://github.com/HellenSabo"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Hellen Sabo</button></a>
 <br>
+
+## Instalação
+
+Clonar o repositório :
+
+```bash
+git clone https://github.com/gp3pi/projeto-integrador-frontend.git
+```
