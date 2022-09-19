@@ -1,46 +1,19 @@
-# Getting Started with Create React App
+# Projeto Integrador Generation Brasil
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Utilizando Metodologia Ágil (SCRUM), o fluxo de desenvolvimento Git Flow, a biblioteca React com Typescript, criamos uma aplicação para uma rede social integrada à divulgação de notícias. Seu intuito é colaborar com regiões geograficamente vulneráveis, tais como as que carecem de recursos básicos ou que se encontram em situação bélica, e esse suporte, por parte dos usuários, poderá ocorrer através de doações e compartilhamento de informações. 
 
-## Available Scripts
+Backend do projeto: https://github.com/gp3pi/projeto-integrador
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Membros: <br>
+<a href="https://github.com/JohnnHere"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">João Orlando</button></a>
+<br>
+<a href="https://github.com/vitormartinsxd"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Vitor Martins</button></a>
+<br>
+<a href="https://github.com/gabrxgomes"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Gabriel Gomes</button></a>
+<br>
+<a href="https://github.com/vhpcastro"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Victor Hugo</button></a>
+<br>
+<a href="https://github.com/melissaJll"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Melissa Julia</button></a>
+<br>
+<a href="https://github.com/HellenSabo"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Hellen Sabo</button></a>
+<br>
