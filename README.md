@@ -25,7 +25,7 @@ Clonar o repositório:
 ```bash
 git clone https://github.com/gp3pi/projeto-integrador-frontend.git
 ```
-Instalas as dependencias:
+Instalação de dependências:
 
 ```bash
 npm install
