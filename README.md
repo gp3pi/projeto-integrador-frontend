@@ -25,9 +25,9 @@ Clonar o repositório:
 ```bash
 git clone https://github.com/gp3pi/projeto-integrador-frontend.git
 ```
-Instalação de dependências:
+### Instalação de dependências:
 
-Material UI
+#### Material UI
 
 ```bash
 npm install
