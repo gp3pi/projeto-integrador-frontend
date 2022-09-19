@@ -53,5 +53,24 @@ npm add @emotion/styled@11.3.0
 ```bash
 npm add @mui/material@5.0.6
 ```
+#### React Router Dom
 
+```bash
+npm add react-router-dom@6
+```
 
+#### Axios
+
+```bash
+npm add axios@0.21.4
+```
+#### Redux
+
+```bash
+npm add @types/redux@3.6.0 react-redux@7.2.5
+```
+#### React-toastify
+
+```bash
+npm add react-toastify@8.0.3
+```
