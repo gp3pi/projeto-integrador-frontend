@@ -84,3 +84,8 @@ npm start
 #### Tela de login
 
 ![image](https://user-images.githubusercontent.com/92900668/191021662-7b2d085b-8a86-4d32-88b8-fcd8cb690f39.png)
+
+Este projeto é construído em torno de três entidades: usuário, tema e postagem (conforme o gráfico mostrado no README.md do backend). O usuário é capaz de criar, ler, atualizar e deletar temas e postagens com imagens, conforme a imagem abaixo:
+
+![image](https://user-images.githubusercontent.com/92900668/191022360-703fd025-d963-4087-84f7-cc51aa3991da.png)
+
