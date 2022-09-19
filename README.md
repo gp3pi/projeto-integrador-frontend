@@ -25,7 +25,7 @@ Clonar o repositório:
 ```bash
 git clone https://github.com/gp3pi/projeto-integrador-frontend.git
 ```
-### Instalação de dependências:
+### Instalação de dependências
 
 #### Material UI
 
@@ -74,3 +74,13 @@ npm add @types/redux@3.6.0 react-redux@7.2.5
 ```bash
 npm add react-toastify@8.0.3
 ```
+### Comando utilizado para iniciar o projeto em modo de desenvolvimento
+
+```bash
+npm start
+```
+### Layout da aplicação
+
+#### Tela de login
+
+![image](https://user-images.githubusercontent.com/92900668/191021662-7b2d085b-8a86-4d32-88b8-fcd8cb690f39.png)
