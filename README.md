@@ -30,3 +30,26 @@ Instalas as dependencias:
 ```bash
 npm install
 ```
+```bash
+npm add @material-ui/core@4.12.3
+```
+```bash
+npm add @material-ui/icons@4.11.2
+```
+```bash
+npm add @mui/icons-material@5.0.5
+```
+```bash
+npm add @material-ui/lab@4.0.0-alpha.60
+```
+```bash
+npm add @emotion/react@11.5.0
+```
+```bash
+npm add @emotion/styled@11.3.0
+```
+```bash
+npm add @mui/material@5.0.6
+```
+
+
