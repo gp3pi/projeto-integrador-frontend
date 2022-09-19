@@ -99,3 +99,6 @@ Este projeto é construído em torno de três entidades: usuário, tema e postag
 
 #### Melhorar a cybersegurança
 
+## Sugestões e agradecimentos
+
+Conforme citado, este projeto foi realizado no bootcamp da Generation Brasil, portanto gostaríamos de agradecer aos colegas, à administração e aos instrutores que fizeram parte da nossa evolução durante as 6 semanas que este projeto durou. Para sugestões e/ou colaboração, contate-nos através dos links disponibilizados no início deste documento.
