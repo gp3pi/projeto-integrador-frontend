@@ -4,3 +4,8 @@
     font-weight: bold!important;
     border: 2px solid rgba(217,27,27,1)!important ;
 }
+
+.jss2 {
+    border-radius: 10px;
+    border: none!important;
+}
