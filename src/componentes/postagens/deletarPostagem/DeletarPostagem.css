@@ -1,0 +1,36 @@
+.deletebutton {
+    margin: 0!important;
+    background-color: rgb(228, 227, 227)!important;
+    box-shadow: none!important;
+    width: 5rem;
+}
+
+.divisoria {
+    width: 95%;
+    height: 10px;
+    border-top: 2px solid rgb(216, 216, 216);
+}
+
+.deletebutton:hover {
+    background-color: rgb(233, 233, 233)!important;
+}
+
+.deleteicons {
+    color: gray!important;
+}
+
+.deletebtn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.css-qc0r86 {
+    justify-content: space-evenly!important;
+    margin: 0!important;
+}
+
+.MuiCardActions-root {
+    padding: 0!important;
+    margin-bottom: 1rem;
+}

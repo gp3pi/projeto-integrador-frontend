@@ -5,7 +5,7 @@ import { UserState } from "../../../store/tokens/tokensReducer";
 import "./Footer.css";
 
 function Footer() {
-  
+
   const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );

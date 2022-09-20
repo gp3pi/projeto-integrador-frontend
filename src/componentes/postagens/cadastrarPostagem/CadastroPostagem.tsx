@@ -19,6 +19,8 @@ import Tema from "../../../models/Tema";
 import User from "../../../models/User";
 import { busca, buscaId, post, put } from "../../../services/Service";
 import { UserState } from "../../../store/tokens/tokensReducer";
+import DoneAllIcon from '@material-ui/icons/DoneAll';
+import './CadastroPostagem.css';
 
 function CadastrarPostagem() {
   let navigate = useNavigate();
@@ -204,7 +206,7 @@ function CadastrarPostagem() {
             component="h1"
             align="center"
           >
-            Cadastro de Postagem
+            Formulário
           </Typography>
           <TextField
             className="titleList"
@@ -259,8 +261,8 @@ function CadastrarPostagem() {
               ))}
             </Select>
             <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-            <Button type="submit" variant="contained" color="primary">
-              Finalizar
+            <Button className="okbutton" type="submit" variant="contained" color="primary">
+              <DoneAllIcon className="checkicon"/>
             </Button>
           </FormControl>
         </form>

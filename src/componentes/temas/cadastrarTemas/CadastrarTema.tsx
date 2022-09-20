@@ -7,6 +7,8 @@ import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import DoneAllIcon from '@material-ui/icons/DoneAll';
+import './CadastrarTema.css';
 
 function CadastroTema() {
   let navigate = useNavigate();
@@ -150,7 +152,7 @@ function CadastroTema() {
             component="h1"
             align="center"
           >
-            Cadastrar Tema
+            Formulário
           </Typography>
           <TextField
             value={tema.titulo}
@@ -185,8 +187,8 @@ function CadastroTema() {
             fullWidth
           />
 
-          <Button type="submit" variant="contained" color="primary" fullWidth>
-            Finalizar
+          <Button className="okbutton" type="submit" variant="contained" color="primary" fullWidth>
+            <DoneAllIcon className="checkicon" />
           </Button>
         </form>
       </Container>
