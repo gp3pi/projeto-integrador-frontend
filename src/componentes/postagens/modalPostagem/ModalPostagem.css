@@ -1,6 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .btnModal-post {
     background-color: white!important;
     color: rgba(217,27,27,1)!important;
     font-weight: bold!important;
     border: 2px solid rgba(217,27,27,1)!important;
+}
+
+.cursor {
+    display: flex;
+    flex-direction: row;
+}
+
+.makeStyles-paper-1 {
+    border-radius: 10px;
+    border: none!important;
+}
+
+.MuiSvgIcon-root {
+    color: gray;
+    cursor: pointer;
+}
+
+.MuiTypography-colorTextSecondary {
+    font-family: 'Open Sans', sans-serif!important;
+    
+}
+
+.checkicon {
+    color: gray!important;
+}
+
+.MuiButton-containedPrimary {
+    background-color: rgb(228, 227, 227)!important;
+    box-shadow: none!important;
+    margin-top: 1rem!important;
+}
+
+.MuiButton-containedPrimary:hover {
+    background-color: rgb(233, 233, 233)!important;
+    box-shadow: none!important;
 }

@@ -1,0 +1,22 @@
+.divisoriaDel {
+    width: 80%;
+    height: 10px;
+    border-top: 2px solid rgb(216, 216, 216);
+}
+
+.divisoria-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.deletebuttons {
+    margin: 0!important;
+    background-color: rgb(228, 227, 227)!important;
+    box-shadow: none!important;
+    width: 10rem;
+}
+
+.deletebuttons:hover {
+    background-color: rgb(233, 233, 233)!important;
+}

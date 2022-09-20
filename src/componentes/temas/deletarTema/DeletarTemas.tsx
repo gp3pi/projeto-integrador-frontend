@@ -13,6 +13,9 @@ import Tema from "../../../models/Tema";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import DeleteIcon from '@material-ui/icons/Delete';
+import './DeletarTema.css'
 
 function DeletarTemas() {
   let navigate = useNavigate();
@@ -33,7 +36,7 @@ function DeletarTemas() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    });
+      });
       navigate("/login");
     }
   }, [token]);
@@ -68,7 +71,7 @@ function DeletarTemas() {
       draggable: false,
       theme: "colored",
       progress: undefined,
-      });
+    });
   }
 
   function nao() {
@@ -77,7 +80,7 @@ function DeletarTemas() {
 
   return (
     <>
-      <Box m={2}>
+      <Box className="tamanhoPost" m={2}>
         <Card variant="outlined">
           <CardContent>
             <Box justifyContent="center">
@@ -88,27 +91,31 @@ function DeletarTemas() {
               <Typography color="textSecondary">{tema?.descricao}</Typography>
             </Box>
           </CardContent>
+          <Box className="divisoria-container">
+          <Box className="divisoriaDel"></Box>
+          </Box>
           <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
+            <Box className="deletebtn-container" display="flex" justifyContent="start" ml={1.0} mb={2}>
               <Box mx={2}>
                 <Button
+                  className="deletebuttons"
                   onClick={sim}
                   variant="contained"
-                  className="marginLeft"
                   size="large"
                   color="primary"
                 >
-                  Sim
+                  <DeleteIcon className="deleteicons"/>
                 </Button>
               </Box>
               <Box mx={2}>
                 <Button
+                  className="deletebuttons"
                   onClick={nao}
                   variant="contained"
                   size="large"
                   color="secondary"
                 >
-                  Não
+                  <ArrowBackIcon className="deleteicons"/>
                 </Button>
               </Box>
             </Box>

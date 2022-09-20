@@ -48,7 +48,7 @@ function ModalPostagem () {
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <Box display="flex" justifyContent="flex-end" className="cursor">
-        <CloseIcon className='x' onClick={handleClose}/>
+        <CloseIcon className='closeicon' onClick={handleClose}/>
       
       </Box>
       

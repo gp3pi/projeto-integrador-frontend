@@ -1,0 +1,11 @@
+.makeStyles-paper-2 {
+    border-radius: 10px;
+    border: none!important;
+}
+
+.tamanhoPost {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
