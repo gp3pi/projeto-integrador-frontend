@@ -1,6 +1,6 @@
 # Projeto Integrador Generation Brasil
 
-Utilizando Metodologia Ágil (SCRUM), o fluxo de desenvolvimento Git Flow, a biblioteca React com Typescript, criamos uma aplicação para uma rede social integrada à divulgação de notícias. Seu intuito é colaborar com regiões geograficamente vulneráveis, tais como as que carecem de recursos básicos ou que se encontram em situação bélica, e esse suporte, por parte dos usuários, poderá ocorrer através de doações e compartilhamento de informações. 
+Utilizando Metodologias Ágeis (SCRUM e Kanban), o fluxo de desenvolvimento Git Flow, a biblioteca React com Typescript, criamos uma aplicação para uma rede social integrada à divulgação de notícias. Seu intuito é colaborar com regiões geograficamente vulneráveis, tais como as que carecem de recursos básicos ou que se encontram em situação bélica, e esse suporte, por parte dos usuários, poderá ocorrer através de doações e compartilhamento de informações. 
 
 Backend do projeto: https://github.com/gp3pi/projeto-integrador
 
